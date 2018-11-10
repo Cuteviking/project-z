@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Calculator</title>
+</head>
+<body>
+
+<div id="app">
+    <div class="app-inner">
+        <div class="monthly-cost">
+            <div class="label monthly-cost-label">
+                {{getContent().monthlyCostLabel}}
+            </div>
+            <div class="monthly-cost-value">
+                {{monthlyCost + ' ' + getContent().monthlyCostSuffix}}
+            </div>
+        </div>
+
+        <div 
+            v-for="(calculatorField, calculatorFieldKey) in calculatorFields"
+            :class="['field', calculatorFieldKey]"
+        >
+            <div :class="['label', calculatorFieldKey +'-label']">
+                {{calculatorField.label}}
+            </div>
+            <div class="calculator-wrapper">
+                <button class="calculator-button" @click="updateCalculatorValue(calculatorFieldKey, -1)">
+                    <span>-</span>
+                </button>
+
+                <input 
+                    :class="['value', calculatorFieldKey +'-value']" 
+                    @keyup.prevent="filterInput(calculatorFieldKey, $event)" 
+                    v-model="calculatorField.value.toLocaleString() + ' ' + calculatorField.suffix"
+                >
+
+                <button class="calculator-button" @click="updateCalculatorValue(calculatorFieldKey, 1)">
+                    <span>+</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="cta-wrapper">
+            <button class="cta-button">
+                {{getContent().ctaLabel}}
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>

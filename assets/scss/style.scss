@@ -1,0 +1,188 @@
+body {
+	background-color: #f2f2f2;
+	font-family: SharpSansNo1,Calibri,sans-serif;
+}
+
+#app {
+	margin: 0 auto;
+	margin-top: 40px;
+	max-width: 377px;
+} 
+
+.app-inner {
+	padding: 30px 15px;
+	background-color: #fff;
+
+	/* General elements */
+
+	.field {
+		margin-bottom: 30px;
+
+		.label {  
+			margin-bottom: 10px; 
+		}
+   
+		.calculator-wrapper { 
+
+			> * {
+				vertical-align: middle;
+				line-height: normal;
+				display: inline-block;
+			}
+
+			.value { 
+				margin: 0 16px;
+				width: calc(100% - 132px);
+				height: 50px;
+				background: #fff;
+    			border: 1px solid #ccc; 
+    			border-radius: 5px; 
+    			padding: 0 5%;
+    			color: #201c46;
+			    font-size: 16px;
+			    font-weight: 400;
+			}
+
+			.calculator-button {
+			    border: none;
+			    line-height: 1;
+			    overflow: hidden;
+			    width: 44px;
+			    height: 44px;
+			    content: "";
+			    font-size: 40px;
+			    color: white;
+			    background: #61d5a7;
+			    border-radius: 50%;
+			    cursor: pointer;
+			    box-sizing: border-box;
+			    font-weight: lighter;
+			    padding-bottom: 4px;
+			}
+		}
+	}
+
+	.label { 
+		font-weight: 700; 
+    	font-size: 16px;
+    	line-height: 18px; 
+    	font-family: SharpSansNo1,Calibri,sans-serif;
+	}
+
+	/* Specific elements */
+
+	.monthly-cost {
+
+		.monthly-cost-value {
+			color: #201c46;
+		    font-size: 1.7em;
+		    font-style: italic;
+		    margin-bottom: 10px; 
+		}
+	}
+
+	.amount {
+
+	}
+
+	.repayment { 
+		
+	}
+
+	.cta-wrapper {
+		margin-top: 55px;
+
+		.cta-button {
+			font-family: SharpSansNo1,Calibri,sans-serif;
+			position: relative;
+		    display: inline-block;
+		    height: 65px;
+		    font-size: 20px;
+		    font-weight: 400;
+		    font-style: italic;
+		    line-height: 61px;
+		    text-decoration: none;
+		    text-align: center;
+		    white-space: nowrap;
+		    outline: none;
+		    padding: 0 30px;
+		    border: 2px solid;
+		    background-clip: padding-box;
+		    border-radius: 65px;
+
+			width: 100%;
+			color: #fff;
+		    background: #61d5a7;
+		    border-color: #61d5a7;
+		    text-align: left;
+    		padding-right: 90px;
+    		cursor: pointer;
+
+    		&:before {
+    		    position: absolute;
+			    top: 0;
+			    right: 30px;
+			    font-family: Zmarta Icons;
+			    font-style: normal;
+    			font-size: 14px;
+    			content: "\E90F";
+    		}
+		}
+	}
+
+}
+
+
+@font-face{
+	font-family:Zmarta Icons;
+	src: url(https://www.zmarta.se/ui/bundles/fonts/zmarta/zmarta-icons.eot);
+	src: url(https://www.zmarta.se/ui/bundles/fonts/zmarta/zmarta-icons.eot?#iefix) format("embedded-opentype"),
+		 url(https://www.zmarta.se/ui/bundles/fonts/icons/zmarta-icons.woff) format("woff"),
+		 url(https://www.zmarta.se/ui/bundles/fonts/icons/zmarta-icons.ttf) format("truetype"),
+		 url(https://www.zmarta.se/ui/bundles/fonts/icons/zmarta-icons.svg#zmarta) format("svg") 
+}
+
+
+@font-face{
+	font-family: SharpSansNo1;
+	src: url(https://www.zmarta.se/ui/bundles/fonts/zmarta/sharp-sans-no1/book.eot);
+	src: url(https://www.zmarta.se/ui/bundles/fonts/zmarta/sharp-sans-no1/book.eot?#iefix) format("embedded-opentype"),
+		 url(https://www.zmarta.se/ui/bundles/fonts/zmarta/sharp-sans-no1/book.woff) format("woff"),
+		 url(https://www.zmarta.se/ui/bundles/fonts/zmarta/sharp-sans-no1/book.otf) format("truetype"),
+		 url(https://www.zmarta.se/ui/bundles/fonts/zmarta/sharp-sans-no1/book.svg) format("svg");
+	font-style:normal;
+	font-weight:400;
+}
+
+@font-face{
+	font-family:SharpSansNo1;
+	src: url(https://www.zmarta.se/ui/bundles/fonts/zmarta/sharp-sans-no1/semibold.eot);
+	src: url(https://www.zmarta.se/ui/bundles/fonts/zmarta/sharp-sans-no1/semibold.eot?#iefix) format("embedded-opentype"),
+		 url(https://www.zmarta.se/ui/bundles/fonts/zmarta/sharp-sans-no1/semibold.woff) format("woff"),
+		 url(https://www.zmarta.se/ui/bundles/fonts/zmarta/sharp-sans-no1/semibold.otf) format("truetype"),
+		 url(https://www.zmarta.se/ui/bundles/fonts/zmarta/sharp-sans-no1/semibold.svg) format("svg");
+	font-style:normal;
+	font-weight:700
+}
+
+@font-face{
+	font-family:SharpSansNo1;
+	src: url(https://www.zmarta.se/ui/bundles/fonts/zmarta/sharp-sans-no1/book-italic.eot);
+	src: url(https://www.zmarta.se/ui/bundles/fonts/zmarta/sharp-sans-no1/book-italic.eot?#iefix) format("embedded-opentype"),
+		 url(https://www.zmarta.se/ui/bundles/fonts/zmarta/sharp-sans-no1/book-italic.woff) format("woff"),
+		 url(https://www.zmarta.se/ui/bundles/fonts/zmarta/sharp-sans-no1/book-italic.otf) format("truetype"),
+		 url(https://www.zmarta.se/ui/bundles/fonts/zmarta/sharp-sans-no1/book-italic.svg) format("svg");
+	font-style:italic;
+	font-weight:400
+}
+
+@font-face{
+	font-family:SharpSansNo1;
+	src: url(https://www.zmarta.se/ui/bundles/fonts/zmarta/sharp-sans-no1/semibold-italic.eot);
+	src: url(https://www.zmarta.se/ui/bundles/fonts/zmarta/sharp-sans-no1/semibold-italic.eot?#iefix) format("embedded-opentype"),
+		 url(https://www.zmarta.se/ui/bundles/fonts/zmarta/sharp-sans-no1/semibold-italic.woff) format("woff"),
+		 url(https://www.zmarta.se/ui/bundles/fonts/zmarta/sharp-sans-no1/semibold-italic.otf) format("truetype"),
+		 url(https://www.zmarta.se/ui/bundles/fonts/zmarta/sharp-sans-no1/semibold-italic.svg) format("svg");
+	font-style:italic;
+	font-weight:700
+} 
